@@ -20,9 +20,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-name: pycodestyle
+name: barusp-pycodestyle
 description: Check Python code style with pycodestyle.
-author: Petra Barus <petr.barus@gmail.com>
+author: Petra Barus <petra.barus@gmail.com>
 
 inputs:
   github_token:
