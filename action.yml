@@ -1,0 +1,27 @@
+name: pycodestyle
+description: Check Python code style with pycodestyle.
+author: Petra Barus <petr.barus@gmail.com>
+
+inputs:
+  github_token:
+    description: 'The default GitHub token (secrets.GITHUB_TOKEN). We need this to post a comment to the PR as the bot.'
+    required: true
+    default: ${{ github.token }}
+  base:
+    type: string
+    description: Base branch to compare against.
+    required: false
+  exclude:
+    type: string
+    description: Comma-separated list of patterns of paths to exclude from the check.
+    required: false
+  workspace:
+    description: 'The workspace directory. Default is the root of the repository.'
+    required: false
+    default: ${{ github.workspace  }}
+branding:
+  icon: check
+  color: green
+runs:
+  using: docker
+  image: 'Dockerfile'
